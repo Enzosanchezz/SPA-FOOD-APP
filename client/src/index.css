@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-image: url(https://img.freepik.com/foto-gratis/pastas-crudas-tallarines-cerca-sus-ingredientes-salsa-tomate-sobre-fondo-madera-texturizado_23-2148195011.jpg?w=2000); */
+  background-image: url(https://s3.amazonaws.com/businessinsider.mx/wp-content/uploads/2021/03/30115039/Business_Insider_Mexico_hierro.jpg);
+  /* background-image: url(); */
+  background-repeat:no-repeat;
+  /* background-size: auto; */
+  background-attachment: fixed;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

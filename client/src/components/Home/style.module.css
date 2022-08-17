@@ -1,0 +1,66 @@
+.cards{
+    display: flex;
+    justify-content: center;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.creaReceta{
+   
+    display: flex;
+    justify-content: end;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+    
+}
+.boton{
+    color: white;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(75, 114, 74, 0.462);
+    padding: 0 4px 0 4px;
+    background-color: rgba(96, 145, 94, 0.462);
+    padding: 5px 4px 5px 4px;
+}
+.span{
+    background-color: rgba(0, 0, 0, 0.49);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: baseline;
+    align-content: center;
+}
+.botonVolverCargar{
+    color: white;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 0.1px solid rgba(75, 114, 74, 0.462);
+    padding: 5px 4px 5px 4px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(96, 145, 94, 0.462);
+}
+.divHome{
+    display: flex;
+    justify-content: start;
+    color:rgb(255, 255, 255) ;
+}
+.select{
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding: 5px 4px 5px 4px;
+    background-color: rgba(15, 32, 11, 0.562);
+    margin: 5px;
+}
+ .gif{
+    width: 500px;
+    /* border-radius: 50px;
+    opacity: 0.8;
+    filter:alpha(opacity=100); */
+} 

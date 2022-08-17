@@ -1,0 +1,14 @@
+/* .btn{
+    background-color: blue;
+    border-radius: 50%;
+} */
+.btn {
+    border: 1px solid #000000af; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: #0c440a60; /*color botón*/
+    color: #000000; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 10px;
+    }
