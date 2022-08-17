@@ -2,7 +2,7 @@ import axios from "axios";
 
 export function getRecipes(){
     return async function(dispatch){
-        let result = await axios.get("http://localhost:3001/recipes")
+        let result = await axios.get("https://food-app-spa.herokuapp.com/recipes")
         return dispatch({type: 'GET_RECIPES', payload: result.data})
     }
 }
@@ -10,7 +10,7 @@ export function getRecipes(){
 export function getNameRecipe(name){
         return async function(dispatch){
             try {
-                let result = await axios.get(`http://localhost:3001/recipes?name=${name}`)
+                let result = await axios.get(`https://food-app-spa.herokuapp.com/recipes?name=${name}`)
             return dispatch({type: 'GET_NAME_RECIPE', payload: result.data})
             } catch (error) {
                 alert("No existe esa receta")
@@ -48,14 +48,14 @@ export function filterCreated(payload){
 
 export function getDetail(id){
     return async function(dispatch){
-        let json = await axios.get(`http://localhost:3001/recipes/${id}`)
+        let json = await axios.get(`https://food-app-spa.herokuapp.com/recipes/${id}`)
         return dispatch({type : 'GET_DETAIL', payload :json.data})
     }
 }
 
 export function getDiet(){
     return async function(dispatch){
-        let json = await axios.get("http://localhost:3001/diets")
+        let json = await axios.get("https://food-app-spa.herokuapp.com/diets")
         return dispatch({
             type: 'GET_DIET',
             payload : json.data
@@ -65,7 +65,7 @@ export function getDiet(){
 
 export function postRecipe(payload){
     return async function(dispatch){
-        let json = await axios.post("http://localhost:3001/recipes", payload)
+        let json = await axios.post("https://food-app-spa.herokuapp.com/recipes", payload)
         return json
     }
 }
