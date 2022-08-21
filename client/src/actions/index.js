@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const SERVER = "https://food-app-spa.herokuapp.com"
-// const SERVER = "http://localhost:3001"
+// const SERVER = "https://food-app-spa.herokuapp.com"
+const SERVER = "http://localhost:3001"
 
 export function getRecipes(){
     return async function(dispatch){

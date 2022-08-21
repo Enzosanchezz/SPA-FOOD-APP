@@ -29,8 +29,14 @@ export default function CreateRecipe(){
         let errors = {};
         if(!input.name){
             errors.name = "Escribe un nombre por favor"
+        }else if(input.healthScore < 0 || input.healthScore > 100){
+            errors.healthScore = "Solo valores de 0 a 100"
+        }else if (!input.analyzedInstructions){
+            errors.analyzedInstructions = "Escribe los pasos de la receta"
         }else if (!input.summary){
             errors.summary = "Escribe un resumen por favor"
+        }else if(input.readyInMinutes < 0 || input.readyInMinutes > 100){
+            errors.readyInMinutes = "Solo valores de 0 a 100"
         }
         return errors;
     }
@@ -100,6 +106,7 @@ export default function CreateRecipe(){
                 <div>
                     <label>Nivel de saludable:</label>
                     <input className={style.input} type="number" value={input.healthScore} name="healthScore" onChange={e =>  handleChange(e)}/>
+                    {errors.healthScore && (<p>{errors.healthScore}</p>)}
                 </div>
                 <div>
                     <label>Imagen: </label>
@@ -108,6 +115,7 @@ export default function CreateRecipe(){
                 <div>
                 <label>Paso a Paso: </label>
                     <input className={style.input} type="text" value={input.analyzedInstructions} name="analyzedInstructions" onChange={e =>  handleChange(e)}/>
+                    {errors.analyzedInstructions &&(<p>{errors.analyzedInstructions}</p>)}
                 </div>
                 <div>
                     <label>Resumen del plato*:</label>
@@ -117,6 +125,7 @@ export default function CreateRecipe(){
                 <div>
                 <label>Tiempo de Preparacion:</label>
                     <input className={style.input} type="number" value={input.readyInMinutes} name="readyInMinutes" onChange={e =>  handleChange(e)}/>
+                    {errors.readyInMinutes &&(<p>{errors.readyInMinutes}</p>)}
                 </div>
 
                 <select onChange={e => handleSelect(e)}>
