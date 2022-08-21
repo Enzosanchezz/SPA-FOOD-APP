@@ -10,7 +10,6 @@ export default function CreateRecipe(){
     const history = useHistory();
     const dieta = useSelector((state) => state.diet);
     const [errors, setErrors] = useState({});
-    // console.log('DIETA', dieta)
     const [input, setInput] = useState({
         name:"",
         summary:"",

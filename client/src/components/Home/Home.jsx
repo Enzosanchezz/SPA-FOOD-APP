@@ -104,7 +104,6 @@ export default function Home(){
             
         {
           currentRecipe && currentRecipe.map((r, i) => {
-            // console.log('currentRecipe :>> ', currentRecipe);
             return(
                 <div key={i} >
                     <Link to={"/home/" + r.id} className={style.link} >

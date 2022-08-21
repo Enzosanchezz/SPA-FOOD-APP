@@ -6,8 +6,6 @@ import style from "./style.module.css";
 import gif from "./gif/YCZH.gif";
 
 export default function Details(props){
-console.log (props)
-
   
     const dispatch = useDispatch();
    
