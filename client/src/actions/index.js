@@ -1,9 +1,9 @@
 import axios from "axios";
-const {SERVER} = process.env;
+const {REACT_APP_SERVER} = process.env;
 
 export function getRecipes(){
     return async function(dispatch){
-        let result = await axios.get(`${SERVER}/recipes`)
+        let result = await axios.get(`${REACT_APP_SERVER}/recipes`)
         return dispatch({type: 'GET_RECIPES', payload: result.data})
     }
 }
@@ -11,7 +11,7 @@ export function getRecipes(){
 export function getNameRecipe(name){
         return async function(dispatch){
             try {
-                let result = await axios.get(`${SERVER}/recipes?name=${name}`)
+                let result = await axios.get(`${REACT_APP_SERVER}/recipes?name=${name}`)
             return dispatch({type: 'GET_NAME_RECIPE', payload: result.data})
             } catch (error) {
                 alert("No existe esa receta")
@@ -49,14 +49,14 @@ export function filterCreated(payload){
 
 export function getDetail(id){
     return async function(dispatch){
-        let json = await axios.get(`${SERVER}/recipes/${id}`)
+        let json = await axios.get(`${REACT_APP_SERVER}/recipes/${id}`)
         return dispatch({type : 'GET_DETAIL', payload :json.data})
     }
 }
 
 export function getDiet(){
     return async function(dispatch){
-        let json = await axios.get(`${SERVER}/diets`)
+        let json = await axios.get(`${REACT_APP_SERVER}/diets`)
         return dispatch({
             type: 'GET_DIET',
             payload : json.data
@@ -66,7 +66,7 @@ export function getDiet(){
 
 export function postRecipe(payload){
     return async function(dispatch){
-        let json = await axios.post(`${SERVER}/recipes`, payload)
+        let json = await axios.post(`${REACT_APP_SERVER}/recipes`, payload)
         return json
     }
 }
