@@ -5,7 +5,7 @@ import style from "./style.module.css";
 export default function Card({name, image, diets, healthScore, readyInMinutes}){
     return(
         <div className={style.card}>
-            <h2>Nombre de la Receta: {name}</h2>
+            <h2>{name}</h2>
             <h5>Tiempo de preparacion 🕒: {readyInMinutes} min.</h5>
             <h4 >Dietas: {diets}</h4>
             <h4>Nivel Saludable: {healthScore}</h4>

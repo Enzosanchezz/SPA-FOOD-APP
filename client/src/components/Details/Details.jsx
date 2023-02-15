@@ -29,10 +29,9 @@ export default function Details(props){
                         <h1>{myRecipe[0].name}</h1>
                         <div className={style.details}>
                         <h5>Tiempo de Preparacion 🕒: {myRecipe[0].readyInMinutes} min.</h5>
-                        <h5>Dietas:  {myRecipe[0].createdInDb? myRecipe[0].diets.map((d) => d.name + ', ') :  myRecipe[0].diets.map(e => e + ", ") }</h5>
+                        <h5>Dietas:  {myRecipe[0].diets}</h5>
                         <h5>Nivel de Saludable: {myRecipe[0].healthScore}</h5>
                         <img src={myRecipe[0].image} alt={myRecipe[0].name} />
-
                         </div>
                         <h5>Resumen del plato: {myRecipe[0].summary}</h5>
                         <h5>Paso a Paso: {myRecipe[0].analyzedInstructions}</h5>

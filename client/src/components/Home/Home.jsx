@@ -11,7 +11,7 @@ import style from "./style.module.css";
 
 export default function Home(){
     const dispatch = useDispatch()
-    const [ setOrder] = useState('');
+    const [Order, setOrder] = useState('');
     const allRecipes = useSelector((state) => state.recipes)
     const allDiet = useSelector((state)=> state.diet)
     //paginado
@@ -108,12 +108,11 @@ export default function Home(){
                 <div key={i} >
                     <Link to={"/home/" + r.id} className={style.link} >
                     <Card  className={style.cards}
-                    // key = {i}
                     name = {r.name}
                     readyInMinutes = {r.readyInMinutes}
                     healthScore = {r.healthScore}
                     image = {r.image}
-                    diets = {r.createdInDb? r.diets.map((d) => d.name + ", ") : r.diets.map(e => e + ", ")}
+                    diets = {r.diets}
                     />
                     </Link>
                 </div>

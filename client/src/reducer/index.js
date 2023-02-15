@@ -24,9 +24,9 @@ switch (action.type) {
     case 'FILTER_TYPE_DIET': 
         const recipes = state.recipes;
         const arrayDb = [];
-        const filterDietDb = recipes.filter((r) => r.diets.map(e => e.name).includes(action.payload)).push("si soy")
+        const filterDietDb = recipes.filter((r) => r.diets.includes(action.payload)).push("si soy")
         arrayDb.push(filterDietDb)
-        const filterDietApi = recipes.filter((r) => r.diets.map(e => e).includes(action.payload))
+        const filterDietApi = recipes.filter((r) => r.diets.includes(action.payload))
         const filterAllDiets = arrayDb.includes("si soy")? arrayDb : filterDietApi
         return{...state, recipes: filterAllDiets}
 

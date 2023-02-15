@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "vegan"
+    },
+    {
+        "id": 2,
+        "name": "gluten free"
+    },
+    {
+        "id": 3,
+        "name": "dairy free"
+    },
+    {
+        "id": 4,
+        "name": "lacto ovo vegetarian"
+    },
+    {
+        "id": 5,
+        "name": "paleolithic"
+    },
+    {
+        "id": 6,
+        "name": "primal"
+    },
+    {
+        "id": 7,
+        "name": "whole 30"
+    },
+    {
+        "id": 8,
+        "name": "pescatarian"
+    },
+    {
+        "id": 9,
+        "name": "ketogenic"
+    },
+    {
+        "id": 10,
+        "name": "fodmap friendly"
+    }
+]

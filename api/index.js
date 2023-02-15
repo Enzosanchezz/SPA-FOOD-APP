@@ -19,11 +19,13 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
+const { getDiets } = require('./src/tools/preChargeDiets.js');
+const { getRecipes } = require('./src/tools/preChargeRecipe.js');
 const { PORT } = process.env;
 
-
-// Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: true }).then( async () => {
+  await getDiets();
+  await getRecipes();
   server.listen(PORT || 3001, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
   });

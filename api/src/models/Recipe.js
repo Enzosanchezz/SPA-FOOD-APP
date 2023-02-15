@@ -15,31 +15,25 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     summary : {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     healthScore:{
       type: DataTypes.INTEGER
     },
     analyzedInstructions:{
-      type: DataTypes.STRING,
+      type: DataTypes.ARRAY(DataTypes.STRING),
     },
     image:{
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
     readyInMinutes:{
       type : DataTypes.INTEGER,
     },
-    createdInDb: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-      defaultValue: true
-    },
+    // createdInDb: {
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull: false,
+    //   defaultValue: true
+    // },
   });
 };
-// ID: *
-// Nombre *
-// Resumen del plato *
-// Puntuación
-// Nivel de "comida saludable"
-// Paso a paso
